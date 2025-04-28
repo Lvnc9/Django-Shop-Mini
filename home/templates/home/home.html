@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_headers %}
+<link rel="stylesheet" href="{% static 'home/css/styles.css' %}">
+{% endblock %}
+
+{% block content %}
+    
+    {% for category in categories %}
+        <div class="btn-group">
+            <a href="{{ category.get_absolute_url }}" class="btn btn-danger">{{ category.name }}</a>
+            <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                <span class="visually-hidden">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu">
+                {% for sub in category.scategory.all %}
+                <li><a class="dropdown-item" href="{{ sub.get_absolute_url }}">{{ sub.name}}</a></li>
+                {% endfor %}
+            </ul>
+        </div>    
+    {% endfor %}
+    <br><br>
+    {% for product in products %}
+        <div class="card" style="width: 18rem; display:inline-block;">
+            <a href="{{ product.get_absolute_url }}">
+                <img class="card-img-top" src="{{ product.image.url }}" alt="Card image cap"> <!-- Add URL to make it a full path -->
+            </a>
+            <div class="card-body">
+                <a class="card-title" href="{{ product.get_absolute_url }}">{{ product.slug }}</a>
+                <p class="card-text">{{ product.description }}.</p>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

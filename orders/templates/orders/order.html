@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h3 class="mb-4">🧾 Checkout</h3>
+    <p class="fw-bold">Total: $<span class="text-success">{{ order.get_total }}</span></p>
+    <form action="{% url 'orders:apply_coupon' order.id %}" method="post" class="mt-3">
+        {% csrf_token %}
+        <div class="mb-3">
+            {{ coupon.as_p }}
+        </div>
+        <button type="submit" class="btn btn-primary">Apply Discount Code</button>
+    </form>
+</div>
+{% endblock %}
