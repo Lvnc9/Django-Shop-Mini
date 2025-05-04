@@ -17,11 +17,11 @@ git clone https://github.com/Lvnc9/Django-Shop-Mini.git
 cd Django-Shop-Mini
 pip install -r requirements.txt
 
-#if you get an error while installing **psycopg**, use:
+# if you get an error while installing **psycopg**, use:
 pip install psycopg2-binary
 
-#you need to restart your PostgreSQL 
-install if you don't have (debian family):
+# you need to restart your PostgreSQL 
+# install if you don't have (debian family):
 sudo apt install postgres 
 
 # restart it
