@@ -1,14 +1,14 @@
-# Project Name
+# Django-Shop-Mini
 
-Django-Shop-Mini helps you to get more familliar with django tools and deploying dynamically 👌
+Django-Shop-Mini helps you to get more familiar with Django tools and deploying dynamically 👌
 
 ## Features
-- celery-beat to automate the tasks like removing OTP codes (One Time Password)
-- caching auth and user information using redice 
-- adding django-ckeditor. a powerful writing app which helps you in admin pannel to create your desired descriptions 
-like a Office-Word editter!
-- using boto3 to connect to your buckets instead of using static storage
-- sending OTP codes using Kavenegar (which I'm using you can change it.)
+- celery-beat to automate tasks like removing OTP codes (One Time Password)
+- Caching auth and user information using Redis 
+- adding django-ckeditor, a powerful writing app which helps you in the admin panel to create your desired descriptions 
+like an Office Word editor!
+- Using boto3 to connect to your buckets instead of using static storage
+- sending OTP codes using Kavenegar (which I'm using, you can change it.)
 - 
 
 ## Installation
@@ -17,14 +17,14 @@ git clone https://github.com/Lvnc9/Django-Shop-Mini.git
 cd Django-Shop-Mini
 pip install -r requirements.txt
 
-if you got error in installing **psycopg** use:
+if you get an error while installing **psycopg**, use:
 pip install psycopg2-binary
 
-you need to restart you postgres 
-install if you don't have (debian familly):
+you need to restart your PostgreSQL 
+install if you don't have (debian family):
 sudo apt install postgres 
 
-and the restart it 
+and restart it
 sudo systemctl restart postgresql.service
 
 sudo -u postgres psql
