@@ -61,3 +61,6 @@ systemctl start redis-server.service
 
 python manage.py  migrate
 python manage.py  runserver
+```
+## Remember
+you in settings.py change all AWS variables to the bucket and server you use
